@@ -240,9 +240,8 @@ def seed():
     return jsonify({"ok": True})
 
 # ── Run ────────────────────────────────────────────────────────────────────────
-
+init_db()
 if __name__ == "__main__":
-    init_db()
     import os
     port = int(os.environ.get("PORT", 5000))
     print(f"\n✅  Expense Tracker running → http://localhost:{port}\n")
